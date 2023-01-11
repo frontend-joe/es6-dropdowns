@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  background: #5121da;
+}
+
+.dropdown {
+  position: relative;
+  perspective: 200px;
+}
+
+.dropdown button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 16px;
+  width: 230px;
+  height: 72px;
+  color: #f9f9f9;
+  background: transparent;
+  border-radius: 8px;
+  border: 0;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: "Euclid Circular A";
+}
+
+.dropdown > button {
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.45);
+  transition: 0.3s;
+}
+
+.menu {
+  position: absolute;
+  overflow: hidden;
+  z-index: 1;
+  width: 100%;
+  height: 168px;
+  opacity: 0;
+  transform-origin: 100% 0%;
+  scale: 0;
+  visibility: hidden;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.45);
+  transition: 0.4s;
+}
+
+.dropdown.open .menu {
+  scale: 1;
+  right: 0;
+  top: 72px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu button {
+  border: 0;
+  width: 100%;
+  height: 56px;
+  border-radius: 0;
+}
+
+.menu button:hover {
+  background: rgba(0, 0, 0, 0.26);
+}
+
+.chevron {
+  margin-left: auto;
+  transition: 0.4s;
+}
+
+.dropdown.open .chevron {
+  rotate: -180deg;
+}
