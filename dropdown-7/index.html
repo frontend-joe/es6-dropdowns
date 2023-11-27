@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css"
+      integrity="sha512-pmAAV1X4Nh5jA9m+jcvwJXFQvCBi3T17aZ1KWkqXr7g/O2YMvO8rfaa5ETWDuBvRq6fbDjlw4jHL44jNTScaKg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Dropdown 7</title>
+  </head>
+  <body>
+    <nav>
+      <a
+        class="dropdown-button"
+        onmouseenter="toggleMenuOpen(true)"
+        onmouseleave="toggleMenuOpen(false)"
+      >
+        Skills
+        <svg
+          width="18px"
+          height="18px"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6 9L11.7874 14.7874V14.7874C11.9048 14.9048 12.0952 14.9048 12.2126 14.7874V14.7874L18 9"
+            stroke="#f9f9f9"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </a>
+      <a> About </a>
+      <a> Portfolio </a>
+    </nav>
+    <div
+      onmouseenter="toggleMenuOpen(true)"
+      onmouseleave="toggleMenuOpen(false)"
+      class="menu"
+    >
+      <div class="menu-buttons">
+        <button class="active" onclick="toggleMenuBlock(this, 0)">
+          Coding
+        </button>
+        <button onclick="toggleMenuBlock(this, 1)">Design</button>
+        <button onclick="toggleMenuBlock(this, 2)">Dev Ops</button>
+      </div>
+      <div id="menuContent" class="menu-content">
+        <div class="swiper swiper-menu">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="menu-block">
+                <p>React</p>
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>JavaScript</p>
+                <p>TypeScript</p>
+                <p>ECMAScript</p>
+                <p>Vue</p>
+                <p>Svelte</p>
+                <p>Angular</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="menu-block">
+                <p>Figma</p>
+                <p>Photoshop</p>
+                <p>Adobe XD</p>
+                <p>Sketch</p>
+                <p>InVision</p>
+                <p>EdrawMax</p>
+                <p>After Effects</p>
+                <p>Jitter</p>
+                <p>Spline</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="menu-block">
+                <p>Netlify</p>
+                <p>Vercel</p>
+                <p>Heroku</p>
+                <p>Git</p>
+                <p>GitHub</p>
+                <p>Kubernetes</p>
+                <p>Bit Bucket</p>
+                <p>npm</p>
+                <p>Firecracker</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
+      integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>

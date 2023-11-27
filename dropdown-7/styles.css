@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #333ee7;
+  --color-menu: #1a1d29;
+}
+
+body {
+  margin: 0;
+  background: #212433;
+  font-family: "Euclid Circular A", "Poppins";
+}
+
+nav {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  background: var(--color-primary);
+  width: 100%;
+  height: 60px;
+  box-shadow: 0 20px 30px rgba(57, 76, 96, 0.06);
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(255 255 255 / 70%);
+  font-weight: 400;
+  font-size: 16px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.burger {
+  width: 16px;
+  height: 16px;
+}
+
+nav > a {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 60px;
+  padding: 0 16px 0 0;
+}
+
+nav > a:hover,
+body.open .dropdown-button {
+  color: rgb(255 255 255 / 96%);
+}
+
+.dropdown-button:hover,
+body.open .dropdown-button path {
+  stroke: rgb(255 255 255 / 96%);
+}
+
+.dropdown-button svg {
+  transition: 0.3s;
+}
+
+body.open .dropdown-button svg {
+  rotate: -180deg;
+}
+
+.menu {
+  overflow: hidden;
+  position: fixed;
+  z-index: 1;
+  top: 59px;
+  left: 0;
+  width: 100vw;
+  height: 146px;
+  padding: 10px 20px 20px 0;
+  background: var(--color-menu);
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  translate: 0 -10px;
+  box-shadow: 0 20px 30px rgba(57, 76, 96, 0.06);
+  transition: 0.3s;
+
+  /* opacity: 1;
+  visibility: visible; */
+}
+
+body.open .menu {
+  opacity: 1;
+  visibility: visible;
+  translate: 0;
+}
+
+.menu-buttons {
+  width: 170px;
+  padding: 0 24px 0 16px;
+}
+
+.menu-buttons button {
+  margin: 0;
+  width: 100%;
+  height: 36px;
+  margin: 4px 0;
+  padding: 0 0 0 7px;
+  color: rgb(255 255 255 / 80%);
+  background: transparent;
+  border-radius: 6px;
+  border: 0;
+  border-left: 6px solid transparent;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.menu-buttons button.active {
+  background: var(--color-primary);
+}
+
+.menu-buttons button:hover:not(.active) {
+  background: rgb(255 255 255 / 3%);
+  color: rgb(255 255 255 / 96%);
+}
+
+.menu-content {
+  display: flex;
+}
+
+.menu-content p {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  font-size: 13px;
+  margin: 0;
+  color: rgb(255 255 255 / 56%);
+}
+
+.menu-block {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 41px;
+  align-items: center;
+  gap: 0 44px;
+}
+
+.swiper-slide {
+  opacity: 0;
+  transition: opacity 0.175s;
+}
+
+.swiper-slide-active {
+  opacity: 1;
+}
